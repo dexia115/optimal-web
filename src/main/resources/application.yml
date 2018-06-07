@@ -3,3 +3,5 @@ server:
 spring:
   application:
     name: web-demo
+#logging:
+  #config: classpath:log4j2.xml

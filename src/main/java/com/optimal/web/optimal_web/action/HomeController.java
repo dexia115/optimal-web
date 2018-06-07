@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 @RequestMapping("/")
 public class HomeController {
@@ -12,7 +15,14 @@ public class HomeController {
 	@GetMapping("welcome")
 	@ResponseBody
 	public String welcome() {
-		return "index";
+		log.info("welcome to page");
+		return "this is welcomd";
+	}
+	
+	@GetMapping("hello")
+	@ResponseBody
+	public String hello() {
+		return "this is hello";
 	}
 
 }
